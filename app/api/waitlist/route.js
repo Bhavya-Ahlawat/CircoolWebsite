@@ -38,16 +38,16 @@ export async function POST(req) {
       message: "Email sent successfully",
     });
   } catch (error) {
-    console.error(error);
+  console.error("MAIL ERROR FULL:", error);
+  console.error("STACK:", error?.stack);
 
-    return Response.json(
-      {
-        success: false,
-        message: "Failed to send email",
-      },
-      {
-        status: 500,
-      }
-    );
-  }
+  return Response.json(
+    {
+      success: false,
+      message: error.message,
+      fullError: error,
+    },
+    { status: 500 }
+  );
+}
 }
