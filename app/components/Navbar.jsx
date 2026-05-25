@@ -96,7 +96,7 @@ export default function Navbar() {
 
           {/* View Prototype */}
           <a
-            href="https://www.figma.com/proto/0CBZ8BgVuPedC30Whsvgiq/Mobile-app-Screen-design-CirCool?node-id=1-1230&t=85CvTP5zR6v7EWJU-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A1230"
+            href="https://www.figma.com/proto/DP2CvJ5sTyU2M8B3pxoeCA/Sin-t%C3%ADtulo?node-id=7-368&t=dl6qrpMHTpr1QgfA-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:flex items-center gap-2 border border-[#504915] text-[#debc77] px-5 py-2.5 rounded-md font-medium transition-all duration-300 hover:bg-[#debc77] hover:text-black"
@@ -142,7 +142,7 @@ export default function Navbar() {
           <div className="border-t border-white/10 pt-4 flex flex-col gap-3">
 
             <a
-              href="https://www.figma.com/proto/0CBZ8BgVuPedC30Whsvgiq/Mobile-app-Screen-design-CirCool?node-id=1-1230&t=85CvTP5zR6v7EWJU-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A1230"
+              href="https://www.figma.com/proto/DP2CvJ5sTyU2M8B3pxoeCA/Sin-t%C3%ADtulo?node-id=7-368&t=dl6qrpMHTpr1QgfA-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1"
               onClick={() => setMenuOpen(false)}
               className="text-[#debc77] text-sm flex items-center gap-2"
             >
