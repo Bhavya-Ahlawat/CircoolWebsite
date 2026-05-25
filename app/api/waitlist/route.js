@@ -40,6 +40,8 @@ export async function POST(req) {
   } catch (error) {
   console.error("MAIL ERROR FULL:", error);
   console.error("STACK:", error?.stack);
+  console.log("USER:", process.env.EMAIL_USER);
+console.log("PASS:", process.env.EMAIL_PASS);
 
   return Response.json(
     {
