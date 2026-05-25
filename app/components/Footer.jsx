@@ -1,0 +1,391 @@
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+import {
+  FaLinkedin,
+  FaTwitter,
+  FaInstagram,
+  FaDiscord,
+} from "react-icons/fa";
+
+import { Mail, Globe } from "lucide-react";
+
+export default function Footer() {
+  const productLinks = [
+    { name: "How It Works", href: "#how-it-works" },
+    { name: "Benefits", href: "#benefits" },
+    { name: "For Investors", href: "#for-investors" },
+    { name: "FAQ", href: "#faq" },
+  ];
+
+  const companyLinks = [
+    { name: "About", href: "#about" },
+    { name: "Privacy Policy", href: "#privacy-policy" },
+    { name: "Terms of Use", href: "#terms-of-use" },
+    { name: "Contact", href: "#contact" },
+  ];
+
+  const resourcesLinks = [
+    { name: "Investor Deck", href: "#investor-deck" },
+    { name: "Press Kit", href: "#press-kit" },
+    { name: "Brand Assets", href: "#brand-assets" },
+    { name: "Careers", href: "#careers" },
+  ];
+
+  // NEWSLETTER STATE
+  const [subscriberEmail, setSubscriberEmail] = useState("");
+  const [subscribing, setSubscribing] = useState(false);
+
+  // SUBMIT HANDLER
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+
+    if (!subscriberEmail) return;
+
+    setSubscribing(true);
+
+    try {
+      const response = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: subscriberEmail,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert("Successfully subscribed!");
+
+        setSubscriberEmail("");
+      } else {
+        alert(data.message || "Something went wrong");
+      }
+    } catch (error) {
+      console.error(error);
+
+      alert("Failed to subscribe");
+    }
+
+    setSubscribing(false);
+  };
+
+  return (
+    <footer className="bg-black text-white py-10">
+      <div className="max-w-[90rem] px-6 mx-auto w-full flex flex-col md:flex-row md:justify-between gap-8">
+        
+        {/* LOGO & SOCIAL */}
+        <div className="flex flex-col gap-4 md:w-1/4 min-w-[200px]">
+          
+          <div className="flex items-center gap-2">
+            <img
+              src="/LogoCircool.png"
+              alt="CirCool Logo"
+              className="w-auto h-10"
+            />
+          </div>
+
+          <p className="text-gray-400 text-sm">
+            The first social scoring ecosystem.
+          </p>
+
+          {/* SOCIAL ICONS */}
+          <div className="flex gap-4 mt-2 text-xl">
+            
+            <a
+              href="#"
+              className="
+                w-10
+                h-10
+                flex
+                items-center
+                justify-center
+                rounded-full
+                bg-[#09111f]
+                border
+                border-white/10
+                text-white/60
+                hover:text-white
+                hover:border-[#0d46ff]
+                hover:bg-[#0d46ff]/10
+                transition-all
+                duration-300
+              "
+            >
+              <FaLinkedin />
+            </a>
+
+            <a
+              href="#"
+              className="
+                w-10
+                h-10
+                flex
+                items-center
+                justify-center
+                rounded-full
+                bg-[#09111f]
+                border
+                border-white/10
+                text-white/60
+                hover:text-white
+                hover:border-[#0d46ff]
+                hover:bg-[#0d46ff]/10
+                transition-all
+                duration-300
+              "
+            >
+              <FaTwitter />
+            </a>
+
+            <a
+              href="#"
+              className="
+                w-10
+                h-10
+                flex
+                items-center
+                justify-center
+                rounded-full
+                bg-[#09111f]
+                border
+                border-white/10
+                text-white/60
+                hover:text-white
+                hover:border-[#0d46ff]
+                hover:bg-[#0d46ff]/10
+                transition-all
+                duration-300
+              "
+            >
+              <FaInstagram />
+            </a>
+
+            <a
+              href="#"
+              className="
+                w-10
+                h-10
+                flex
+                items-center
+                justify-center
+                rounded-full
+                bg-[#09111f]
+                border
+                border-white/10
+                text-white/60
+                hover:text-white
+                hover:border-[#0d46ff]
+                hover:bg-[#0d46ff]/10
+                transition-all
+                duration-300
+              "
+            >
+              <FaDiscord />
+            </a>
+          </div>
+        </div>
+
+        {/* FOOTER LINKS */}
+        <div className="grid grid-cols-2 sm:grid-cols-5 gap-6 flex-1 min-w-[250px]">
+          
+          {/* PRODUCT */}
+          <div>
+            <h4 className="text-blue-600 font-semibold mb-3">
+              Product
+            </h4>
+
+            <ul className="space-y-2">
+              {productLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* COMPANY */}
+          <div>
+            <h4 className="text-blue-600 font-semibold mb-3">
+              Company
+            </h4>
+
+            <ul className="space-y-2">
+              {companyLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* RESOURCES */}
+          <div>
+            <h4 className="text-blue-600 font-semibold mb-3">
+              Resources
+            </h4>
+
+            <ul className="space-y-2">
+              {resourcesLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* CONTACT */}
+          <div>
+            <h4 className="text-blue-600 font-semibold mb-3">
+              Contact
+            </h4>
+
+            <ul className="space-y-3 text-gray-300 text-sm">
+              
+              <li className="flex items-center gap-2 hover:text-white transition">
+                <Mail className="w-4 h-4 text-white/60" />
+                <span>info@circool.net</span>
+              </li>
+
+              <li className="flex items-center gap-2 hover:text-white transition">
+                <Globe className="w-4 h-4 text-white/60" />
+                <span>www.circool.com</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* NEWSLETTER */}
+          <div>
+            <h4 className="text-blue-600 font-semibold mb-3">
+              Stay Updated
+            </h4>
+
+            <p className="text-gray-400 text-sm mb-3 leading-relaxed">
+              Subscribe to our newsletter and receive product updates,
+              launch announcements, and exclusive early access news.
+            </p>
+
+            {/* <form
+              onSubmit={handleSubscribe}
+              className="flex flex-col gap-3 mt-2"
+            >
+              <input
+                type="email"
+                placeholder="Your email"
+                required
+                value={subscriberEmail}
+                onChange={(e) =>
+                  setSubscriberEmail(e.target.value)
+                }
+                className="
+                  p-3
+                  rounded-xl
+                  bg-[#09111f]
+                  border
+                  border-white/10
+                  text-white
+                  outline-none
+                  focus:border-[#0d46ff]
+                  transition-all
+                "
+              />
+
+              <button
+                type="submit"
+                disabled={subscribing}
+                className="
+                  bg-blue-600
+                  px-4
+                  py-3
+                  rounded-xl
+                  hover:bg-blue-700
+                  transition
+                  font-medium
+                  disabled:opacity-50
+                "
+              >
+                {subscribing
+                  ? "Subscribing..."
+                  : "Subscribe"}
+              </button>
+            </form> */}
+
+            <form
+  onSubmit={handleSubscribe}
+  className="flex flex-col sm:flex-row mt-2"
+>
+  <input
+    type="email"
+    placeholder="Your email"
+    required
+    value={subscriberEmail}
+    onChange={(e) =>
+      setSubscriberEmail(e.target.value)
+    }
+    className="
+      p-2
+      rounded-l-lg
+      rounded-r-lg
+      sm:rounded-r-none
+      bg-[#09111f]
+      border
+      border-white/10
+      text-white
+      flex-1
+      min-w-0
+      outline-none
+      focus:border-[#0d46ff]
+    "
+  />
+
+  <button
+    type="submit"
+    disabled={subscribing}
+    className="
+      bg-blue-600
+      px-4
+      py-2
+      rounded-r-lg
+      rounded-l-lg
+      sm:rounded-l-none
+      hover:bg-blue-700
+      transition
+      font-medium
+      disabled:opacity-50
+    "
+  >
+    {subscribing
+      ? "Subscribing..."
+      : "Subscribe"}
+  </button>
+</form>
+          </div>
+        </div>
+      </div>
+
+      {/* BOTTOM */}
+      <div className="border-t border-gray-800 mt-8 pt-4 text-center text-gray-500 text-sm">
+        © 2026 CirCool. All rights reserved.
+      </div>
+    </footer>
+  );
+}
