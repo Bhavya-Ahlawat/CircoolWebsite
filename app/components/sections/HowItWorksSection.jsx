@@ -67,8 +67,8 @@ export default function HowItWorksSection() {
     inset-0
     w-full
     h-full
-    object-cover
-    object-center
+    object-contain
+    object-top
     pointer-events-none
     select-none
   "
@@ -78,7 +78,7 @@ export default function HowItWorksSection() {
       {/* <div className="absolute inset-0 bg-gradient-to-r from-[#00040d] via-[#00040d]/90 to-[#00040d]/30" /> */}
 
       {/* CONTENT */}
-      <div className="relative z-10 max-w-[90rem] mx-auto px-5">
+      <div className="relative z-10 max-w-[90rem] mx-auto px-5 pt-80 md:pt-0">
         
         {/* LEFT CONTENT */}
         <div className="max-w-3xl">
@@ -107,12 +107,16 @@ export default function HowItWorksSection() {
         {/* CARDS */}
         <div
           className="
-            mt-8
-            flex
-            flex-wrap
-            xl:flex-nowrap
-            items-center
-            gap-1
+             mt-8
+    grid
+    grid-cols-2
+    gap-4
+
+    lg:flex
+    lg:flex-wrap
+    xl:flex-nowrap
+    lg:items-center
+    lg:gap-1
           "
         >
           {steps.map((step, index) => (
@@ -126,7 +130,7 @@ export default function HowItWorksSection() {
                   w-full
                   sm:w-[240px]
                   lg:w-[220px]
-                  min-h-[255px]
+                  min-h-[380px]
                   bg-[#07101f]/75
                   border
                   border-[#1b2f6b]

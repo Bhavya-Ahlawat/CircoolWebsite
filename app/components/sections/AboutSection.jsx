@@ -76,7 +76,7 @@ export default function AboutSection() {
     w-full
     h-full
     object-cover
-    object-center
+    object-top
     opacity-80
     pointer-events-none
     select-none

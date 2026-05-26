@@ -6,6 +6,7 @@ export default function HomeSection() {
       id="home"
       className="
         relative
+        isolate
         overflow-hidden
         min-h-screen
         flex
@@ -13,6 +14,7 @@ export default function HomeSection() {
         pt-22
         pb-10
         bg-[#00040d]
+        
       "
     >
       {/* FULL BACKGROUND IMAGE */}
@@ -30,6 +32,7 @@ export default function HomeSection() {
           object-top
           pointer-events-none
           select-none
+          z-0
         "
       />
       {/* Mobile Image */}
@@ -42,10 +45,11 @@ export default function HomeSection() {
     inset-0
     w-full
     h-full
-    object-cover
+    object-contain
     object-top
     pointer-events-none
     select-none
+    z-0
   "
 />
 
@@ -54,7 +58,7 @@ export default function HomeSection() {
 
       {/* Main Content */}
       <div className="relative z-10 max-w-[90rem] mx-auto px-6 w-full">
-        <div className="max-w-[90rem]">
+        <div className="max-w-[90rem] pt-70 md:pt-0">
           
           {/* Tags */}
           <div className="flex flex-wrap gap-4 mb-8">
@@ -93,121 +97,145 @@ export default function HomeSection() {
           </h1>
 
           {/* Description */}
-          <p className="text-white text-lg md:text-md leading-relaxed mt-8 max-w-lg">
-            CirCool is the first social scoring ecosystem where
-            digital reputation, meaningful connections, and trusted
-            interactions unlock real opportunities in life and business.
-          </p>
-
-          {/* Buttons */}
-          <div className="flex flex-wrap gap-4 mt-10">
-            
-            {/* Join Button */}
-            <a href="#join-waiting-list">
-            <button
-              className="
-                bg-[#052ff8]
-                hover:bg-white
-                hover:text-[#052ff8]
-                text-white
-                px-8
-                py-4
-                rounded-xl
-                font-regular
-                transition-all
-                duration-300
-                shadow-[0_0_30px_rgba(5,47,248,0.35)]
-                hidden md:flex
-                items-center
-                gap-2
-              "
-            >
-              <span>Join Waiting List</span>
-            <ArrowRight size={18}/>
-            </button>
-            </a>
-<a
-  href="https://www.figma.com/proto/DP2CvJ5sTyU2M8B3pxoeCA/Sin-t%C3%ADtulo?node-id=7-368&t=dl6qrpMHTpr1QgfA-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1"
-  target="_blank"
-  rel="noopener noreferrer"
->
-            {/* Prototype Button */}
-            <button
-              className="
-                group
-                border
-                border-[#504915]
-                text-[#debc77]
-                hover:bg-[#debc77]
-                hover:text-black
-                px-8
-                py-4
-                rounded-xl
-                font-regular
-                transition-all
-                duration-300
-                hidden md:flex
-                items-center
-                gap-2
-                bg-black/20
-                backdrop-blur-md
-              "
-            >
-              {/* <img
-    src="/viewproto.png"
-    alt="Early Access"
-    className="w-4 h-4 object-contain"
-  /> */}
-  {/* Default Image */}
-  <img
-    src="/viewproto.png"
-    alt="View Prototype"
-    className="w-4 h-4 object-contain group-hover:hidden"
-  />
-
-  {/* Hover Image */}
-  <img
-    src="/viewproto-hover.png"
-    alt="View Prototype Hover"
-    className="w-4 h-4 object-contain hidden group-hover:block"
-  />
-              <span>View Prototype</span>
-
-            <ExternalLink size={18} />
-            </button>
-            </a>
-
-            {/* How It Works */}
-            <a href="#how-it-works">
-            <button
+          <p
   className="
-    border
-    border-white/10
+    text-white
+    text-lg md:text-md
+    leading-relaxed
+    mt-8
+    max-w-lg
+
+    /* Mobile glass effect */
     bg-white/5
     backdrop-blur-md
-    hover:bg-white
-    hover:text-black
-    text-white
-    px-8
-    py-4
-    rounded-xl
-    font-regular
-    transition-all
-    duration-300
-    hidden md:flex
-    items-center
-    gap-2
+    border border-white/10
+    rounded-2xl
+    p-5
+
+    /* Desktop unchanged */
+    lg:bg-transparent
+    lg:backdrop-blur-none
+    lg:border-0
+    lg:p-0
+    lg:rounded-none
   "
 >
-  
-  <span>See How It Works</span>
-  <Play size={18} />
-</button>
-</a>
-          </div>
+  CirCool is the first social scoring ecosystem where
+  digital reputation, meaningful connections, and trusted
+  interactions unlock real opportunities in life and business.
+</p>
 
-          <div className="flex flex-col lg:flex-row gap-10 mt-20 items-start">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-4 divide-x divide-white/10">
+          {/* Buttons */}
+          {/* Buttons */}
+<div className="flex flex-nowrap md:flex-wrap gap-2 md:gap-4 mt-10 overflow-x-auto scrollbar-hide">
+
+  {/* Join Button */}
+  <a href="#join-waiting-list" className="flex-shrink-0">
+    <button
+      className="
+        bg-[#052ff8]
+        hover:bg-white
+        hover:text-[#052ff8]
+        text-white
+        px-4 md:px-8
+        py-3 md:py-4
+        rounded-xl
+        text-xs md:text-base
+        font-regular
+        transition-all
+        duration-300
+        shadow-[0_0_30px_rgba(5,47,248,0.35)]
+        flex
+        items-center
+        gap-2
+        whitespace-nowrap
+      "
+    >
+      <span>Join Waiting List</span>
+      <ArrowRight size={16} />
+    </button>
+  </a>
+
+  {/* Prototype Button */}
+  <a
+    href="https://www.figma.com/proto/DP2CvJ5sTyU2M8B3pxoeCA/Sin-t%C3%ADtulo?node-id=7-368&t=dl6qrpMHTpr1QgfA-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex-shrink-0"
+  >
+    <button
+      className="
+        group
+        border
+        border-[#504915]
+        text-[#debc77]
+        hover:bg-[#debc77]
+        hover:text-black
+        px-4 md:px-8
+        py-3 md:py-4
+        rounded-xl
+        text-xs md:text-base
+        font-regular
+        transition-all
+        duration-300
+        flex
+        items-center
+        gap-2
+        bg-black/20
+        backdrop-blur-md
+        whitespace-nowrap
+      "
+    >
+      <img
+        src="/viewproto.png"
+        alt="View Prototype"
+        className="w-4 h-4 object-contain group-hover:hidden"
+      />
+
+      <img
+        src="/viewproto-hover.png"
+        alt="View Prototype Hover"
+        className="w-4 h-4 object-contain hidden group-hover:block"
+      />
+
+      <span>View Prototype</span>
+
+      <ExternalLink size={16} />
+    </button>
+  </a>
+
+  {/* How It Works */}
+  <a href="#how-it-works" className="flex-shrink-0">
+    <button
+      className="
+        border
+        border-white/10
+        bg-white/5
+        backdrop-blur-md
+        hover:bg-white
+        hover:text-black
+        text-white
+        px-4 md:px-8
+        py-3 md:py-4
+        rounded-xl
+        text-xs md:text-base
+        font-regular
+        transition-all
+        duration-300
+        flex
+        items-center
+        gap-2
+        whitespace-nowrap
+      "
+    >
+      <span>See How It Works</span>
+      <Play size={16} />
+    </button>
+  </a>
+</div>
+
+          <div className="flex flex-col lg:flex-row gap-10 mt-5 md:mt-20 items-start">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-4 md:divide-x md:divide-white/10">
 
   {/* Verified Trust */}
   <div className="flex gap-2">
@@ -316,7 +344,8 @@ export default function HomeSection() {
     min-w-[340px]
     lg:min-w-[480px]
     backdrop-blur-md
-    mt-14
+    md:mt-14
+    mt-0
   "
 >
   <div className="w-14 h-14 shrink-0 backdrop-blur-md flex items-center justify-center ">

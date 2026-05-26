@@ -117,11 +117,11 @@ export default function InvestorsSection() {
       /> */}
 
       {/* Content */}
-      <div className="relative z-10 max-w-[90rem] mx-auto px-6">
+      <div className="relative z-10 max-w-[90rem] mx-auto px-6 pt-0 md:pt-0 ">
         {/* Hero */}
         <div className="max-w-5xl">
           {/* Label */}
-          <p className="text-[#0d46ff] uppercase tracking-[0.22em] text-sm font-medium mb-5">
+          <p className="text-[#0d46ff] uppercase tracking-[0.22em] text-sm font-medium mb-5 mt-20 md:mt-0">
             FOR INVESTORS
           </p>
 
@@ -135,54 +135,102 @@ export default function InvestorsSection() {
           </h2>
 
           {/* Description */}
-          <p className="text-white/75 text-lg md:text-xl leading-relaxed mt-8 max-w-3xl">
-            CirCool is the future of social reputation. By investing
-            early,{" "}
-  <br className="hidden md:block" /> you gain access to exclusive opportunities and help
-            build {" "}
-  <br className="hidden md:block" />the infrastructure for trust, transparency, and
-            real-world impact.
-          </p>
+          <p
+  className="
+    text-white/75
+    text-lg md:text-xl
+    leading-relaxed
+    mt-8
+    max-w-3xl
 
-          {/* Top Features */}
-          <div className="flex flex-wrap gap-x-8 gap-y-6 mt-12 divide-x divide-white/10">
-            {topFeatures.map((feature, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-4 pr-10"
-              >
-                {/* Icon */}
-                <div
-                  className="
-                    w-14
-                    h-14
-                    rounded-2xl
-                    
-                    flex
-                    items-center
-                    justify-center
-                    text-[#0d46ff]
-                    shrink-0
-                  "
-                >
-                  <img
-  src={feature.icon}
-  alt=""
-  className="w-10 h-10 object-contain shrink-0"
-/>
-                </div>
+    /* Mobile glass effect only */
+    bg-white/5
+    backdrop-blur-md
+    border border-white/10
+    rounded-2xl
+    p-5
 
-                {/* Text */}
-                <p className="text-white text-lg leading-snug whitespace-pre-line">
-                  {feature.title}
-                </p>
-              </div>
-            ))}
-          </div>
+    /* Remove on desktop */
+    lg:bg-transparent
+    lg:backdrop-blur-none
+    lg:border-0
+    lg:p-0
+    lg:rounded-none
+  "
+>
+  CirCool is the future of social reputation. By investing
+  early,{" "}
+  <br className="hidden md:block" /> you gain access to
+  exclusive opportunities and help build {" "}
+  <br className="hidden md:block" />
+  the infrastructure for trust, transparency, and
+  real-world impact.
+</p>
+
+{/* Top Features */}
+<div
+  className="
+    grid
+    grid-cols-2
+    lg:flex
+    lg:flex-wrap
+    gap-x-4
+    gap-y-6
+    mt-12
+    lg:divide-x
+    lg:divide-white/10
+
+    /* Mobile glass effect only */
+    bg-white/5
+    backdrop-blur-md
+    border border-white/10
+    rounded-3xl
+    p-5
+
+    /* Remove on desktop */
+    lg:bg-transparent
+    lg:backdrop-blur-none
+    lg:border-0
+    lg:p-0
+    lg:rounded-none
+  "
+>
+  {topFeatures.map((feature, index) => (
+    <div
+      key={index}
+      className="flex items-center gap-3 lg:pr-10"
+    >
+      {/* Icon */}
+      <div
+        className="
+          w-14
+          h-14
+          rounded-2xl
+          flex
+          items-center
+          justify-center
+          text-[#0d46ff]
+          shrink-0
+        "
+      >
+        <img
+          src={feature.icon}
+          alt=""
+          className="w-10 h-10 object-contain shrink-0"
+        />
+      </div>
+
+      {/* Text */}
+      <p className="text-white text-lg leading-snug whitespace-pre-line">
+        {feature.title}
+      </p>
+    </div>
+  ))}
+</div>
         </div>
 
         {/* Cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6 mt-12">
+        <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 md:gap-6 mt-12">
           {cards.map((card, index) => (
             <div
               key={index}

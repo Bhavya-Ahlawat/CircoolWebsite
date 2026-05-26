@@ -50,8 +50,8 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-[#00040d]/90 backdrop-blur-xl ">
-      <div className="max-w-[90 rem] mx-auto px-15 py-4 flex items-center justify-between">
+    <header className="fixed top-0 left-0 w-full z-50 bg-[#00040d]/90 backdrop-blur-xl pointer-events-auto">
+      <div className="max-w-[90rem] mx-auto px-6 py-4 flex items-center justify-between">
 
         {/* Logo */}
         <Link href="/" className="flex items-center">
@@ -117,7 +117,8 @@ export default function Navbar() {
           {/* Mobile Menu Button (no style change to your theme) */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden text-white"
+            className="md:hidden text-white relative z-[10000]"
+            type="button"
           >
             {menuOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
@@ -126,7 +127,7 @@ export default function Navbar() {
 
       {/* Mobile Menu (same colors + glass feel preserved) */}
       {menuOpen && (
-        <div className="md:hidden w-full bg-[#00040d]/95 backdrop-blur-xl border-t border-white/10 px-6 py-5 flex flex-col gap-4">
+  <div className="absolute top-full left-0 md:hidden w-full bg-[#00040d]/95 backdrop-blur-xl border-t border-white/10 px-6 py-5 flex flex-col gap-4 z-[9999]"> 
 
           {navItems.map((item) => (
             <Link

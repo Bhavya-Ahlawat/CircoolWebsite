@@ -108,8 +108,8 @@ export default function BenefitsSection() {
     inset-0
     w-full
     h-full
-    object-cover
-    object-center
+    object-contain
+    object-top
     pointer-events-none
     select-none
   "
@@ -118,7 +118,7 @@ export default function BenefitsSection() {
       {/* <div className="absolute inset-0 bg-gradient-to-r from-[#00040d] via-[#00040d]/85 to-[#00040d]/45" /> */}
 
       {/* CONTENT */}
-      <div className="relative z-10 max-w-[90rem] mx-auto px-5">
+      <div className="relative z-10 max-w-[90rem] mx-auto px-5 pt-60 md:pt-0">
         
         {/* HEADING */}
         <div className="max-w-xl">
@@ -150,8 +150,7 @@ export default function BenefitsSection() {
         <div
           className="
             grid
-            grid-cols-1
-            sm:grid-cols-2
+            grid-cols-2
             lg:grid-cols-3
             xl:grid-cols-6
             gap-4
