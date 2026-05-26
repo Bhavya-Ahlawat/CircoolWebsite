@@ -83,7 +83,7 @@ export default function Footer() {
           
           <div className="flex items-center gap-2">
             <img
-              src="/LogoCircool.png"
+              src="/LogoCirCool.png"
               alt="CirCool Logo"
               className="w-auto h-10"
             />
