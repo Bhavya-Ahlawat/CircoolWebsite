@@ -76,10 +76,10 @@ export default function Footer() {
 
   return (
     <footer className="bg-black text-white py-10">
-      <div className="max-w-[90rem] px-6 mx-auto w-full flex flex-col md:flex-row md:justify-between gap-8">
+      <div className="max-w-[90rem] px-6 mx-auto w-full flex flex-col md:flex-row md:justify-between gap-8 md:gap-0">
         
         {/* LOGO & SOCIAL */}
-        <div className="flex flex-col gap-4 md:w-1/4 min-w-[200px]">
+        <div className="flex flex-col gap-4 md:w-[20%] min-w-[200px]">
           
           <div className="flex items-center gap-2">
             <img
@@ -274,7 +274,7 @@ export default function Footer() {
           </div>
 
           {/* NEWSLETTER */}
-          <div>
+          <div className="col-span-2 sm:col-span-1">
             <h4 className="text-blue-600 font-semibold mb-3">
               Stay Updated
             </h4>
@@ -331,7 +331,8 @@ export default function Footer() {
 
             <form
   onSubmit={handleSubscribe}
-  className="flex flex-col sm:flex-row mt-2"
+  // className="flex flex-col sm:flex-row mt-2"
+  className="flex flex-row mt-2 w-full"
 >
   <input
     type="email"
@@ -344,8 +345,8 @@ export default function Footer() {
     className="
       p-2
       rounded-l-lg
-      rounded-r-lg
-      sm:rounded-r-none
+      
+      
       bg-[#09111f]
       border
       border-white/10
@@ -365,11 +366,11 @@ export default function Footer() {
       px-4
       py-2
       rounded-r-lg
-      rounded-l-lg
-      sm:rounded-l-none
+      
       hover:bg-blue-700
       transition
       font-medium
+      whitespace-nowrap
       disabled:opacity-50
     "
   >

@@ -142,23 +142,29 @@ export default function Navbar() {
 
           <div className="border-t border-white/10 pt-4 flex flex-col gap-3">
 
-            <a
-              href="https://www.figma.com/proto/DP2CvJ5sTyU2M8B3pxoeCA/Sin-t%C3%ADtulo?node-id=7-368&t=dl6qrpMHTpr1QgfA-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1"
-              onClick={() => setMenuOpen(false)}
-              className="text-[#debc77] text-sm flex items-center gap-2"
-            >
-              View Prototype <ExternalLink size={16} />
-            </a>
+  {/* View Prototype */}
+  <a
+    href="https://www.figma.com/proto/DP2CvJ5sTyU2M8B3pxoeCA/Sin-t%C3%ADtulo?node-id=7-368&t=dl6qrpMHTpr1QgfA-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1"
+    target="_blank"
+    rel="noopener noreferrer"
+    onClick={() => setMenuOpen(false)}
+    className="flex items-center justify-center gap-2 border border-[#504915] text-[#debc77] px-5 py-3 rounded-md font-medium transition-all duration-300 hover:bg-[#debc77] hover:text-black"
+  >
+    <span>View Prototype</span>
+    <ExternalLink size={18} />
+  </a>
 
-            <a
-              href="#join-waiting-list"
-              onClick={() => setMenuOpen(false)}
-              className="text-[#052ff8] text-sm flex items-center gap-2"
-            >
-              Join Waiting List <ArrowRight size={16} />
-            </a>
+  {/* Join Waiting List */}
+  <a
+    href="#join-waiting-list"
+    onClick={() => setMenuOpen(false)}
+    className="flex items-center justify-center gap-2 bg-[#052ff8] text-white px-5 py-3 rounded-md font-medium transition-all duration-300 hover:bg-white hover:text-[#052ff8]"
+  >
+    <span>Join Waiting List</span>
+    <ArrowRight size={18} />
+  </a>
 
-          </div>
+</div>
         </div>
       )}
     </header>

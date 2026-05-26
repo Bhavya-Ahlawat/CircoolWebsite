@@ -41,6 +41,7 @@ export default function HomeSection() {
   alt=""
   className="
     block md:hidden
+    translate-y-14
     absolute
     inset-0
     w-full
@@ -58,7 +59,7 @@ export default function HomeSection() {
 
       {/* Main Content */}
       <div className="relative z-10 max-w-[90rem] mx-auto px-6 w-full">
-        <div className="max-w-[90rem] pt-70 md:pt-0">
+        <div className="max-w-[90rem] pt-85 md:pt-0">
           
           {/* Tags */}
           <div className="flex flex-wrap gap-4 mb-8">
@@ -125,7 +126,6 @@ export default function HomeSection() {
   interactions unlock real opportunities in life and business.
 </p>
 
-          {/* Buttons */}
           {/* Buttons */}
 <div className="flex flex-nowrap md:flex-wrap gap-2 md:gap-4 mt-10 overflow-x-auto scrollbar-hide">
 
@@ -234,7 +234,7 @@ export default function HomeSection() {
   </a>
 </div>
 
-          <div className="flex flex-col lg:flex-row gap-10 mt-5 md:mt-20 items-start">
+          <div className="flex flex-col lg:flex-row gap-2 md:gap-10 mt-5 md:mt-20 items-start">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-4 md:divide-x md:divide-white/10">
 
   {/* Verified Trust */}

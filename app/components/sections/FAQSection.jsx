@@ -124,7 +124,7 @@ export default function FAQSection() {
           </p>
 
           {/* Title */}
-          <h2 className="text-white font-bold leading-[0.95] tracking-tight text-5xl md:text-7xl whitespace-nowrap">
+          <h2 className="text-white font-bold leading-[0.95] tracking-tight text-4xl sm:text-5xl md:text-7xl md:whitespace-nowrap">
             Frequently{" "}
             <span className="text-[#0d46ff]">
               Asked Questions
