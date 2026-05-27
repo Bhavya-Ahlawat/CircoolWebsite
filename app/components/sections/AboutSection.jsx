@@ -23,7 +23,7 @@ export default function AboutSection() {
 
   const stats = [
     {
-      number: "2023",
+      number: "2026",
       label: "Founded",
     },
     {

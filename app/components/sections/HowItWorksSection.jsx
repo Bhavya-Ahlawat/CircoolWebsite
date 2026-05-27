@@ -78,7 +78,7 @@ export default function HowItWorksSection() {
       {/* <div className="absolute inset-0 bg-gradient-to-r from-[#00040d] via-[#00040d]/90 to-[#00040d]/30" /> */}
 
       {/* CONTENT */}
-      <div className="relative z-10 max-w-[90rem] mx-auto px-5 pt-80 md:pt-0">
+      <div className="relative z-10 max-w-[90rem] mx-auto px-5 pt-110 md:pt-0">
         
         {/* LEFT CONTENT */}
         <div className="max-w-3xl">

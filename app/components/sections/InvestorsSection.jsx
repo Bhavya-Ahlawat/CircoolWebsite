@@ -1,4 +1,4 @@
-
+import { ExternalLink, ArrowRight, Play } from "lucide-react";
 export default function InvestorsSection() {
   const topFeatures = [
     {
@@ -22,7 +22,7 @@ export default function InvestorsSection() {
   const cards = [
     {
       icon: "/rocket.png",
-      title: "High Growth Potential",
+      title: "High Networking Potential",
       description:
         "A massive market opportunity in the social reputation space is just beginning.",
     },
@@ -30,7 +30,7 @@ export default function InvestorsSection() {
       icon: "/GrowYourCircle.png",
       title: "First-Mover Advantage",
       description:
-        "CirCool is one of the first platforms to unify reputation, rewards, and real-world utility.",
+        "Circool is 1st social scoring platform to unify social scoring reputation, rewards, and real-world utility.",
     },
     {
       icon: "/Trusted-&-Secure.png",
@@ -54,7 +54,7 @@ export default function InvestorsSection() {
       icon: "/A-Global.png",
       title: "Global Impact",
       description:
-        "Empowering individuals and communities worldwide through trust and transparency.",
+        "Empowering through networking By trust and transparency.",
     },
   ];
 
@@ -126,13 +126,28 @@ export default function InvestorsSection() {
           </p>
 
           {/* Heading */}
-          <h2 className="text-white font-bold leading-tight tracking-tight text-5xl md:text-7xl">
+          {/* <h2 className="text-white font-bold leading-tight tracking-tight text-5xl md:text-7xl">
             Invest Early.
             <br />
-            <span className="text-[#0d46ff]">
+            <span className="text-white">
               Shape the Future.
             </span>
-          </h2>
+          </h2> */}
+          <h2 className="text-white font-bold leading-tight tracking-tight text-5xl md:text-7xl">
+  <div className="flex flex-wrap items-center gap-3">
+    <span>Invest Early in</span>
+
+    <img
+      src="/LogoCirCool.png"
+      alt="Logo"
+      className="w-auto h-12 md:w-auto md:h-24 object-contain"
+    />
+  </div>
+
+  <span className="text-white block">
+    Shape the Future.
+  </span>
+</h2>
 
           {/* Description */}
           <p
@@ -158,14 +173,73 @@ export default function InvestorsSection() {
     lg:rounded-none
   "
 >
-  CirCool is the future of social reputation. By investing
-  early,{" "}
-  <br className="hidden md:block" /> you gain access to
-  exclusive opportunities and help build {" "}
+  Creating a platform where network long and early believers builders{" "}
+  <br className="hidden md:block" /> 
+  and innovators come together and grow and shape the future of{" "}
   <br className="hidden md:block" />
-  the infrastructure for trust, transparency, and
-  real-world impact.
+  reputation making better world together.
 </p>
+
+{/* Buttons */}
+<div className="flex flex-nowrap md:flex-wrap gap-2 md:gap-4 mt-10 overflow-x-auto scrollbar-hide">
+
+  {/* Join Button */}
+  <a href="#join-waiting-list" className="flex-shrink-0">
+    <button
+      className="
+        bg-[#052ff8]
+        hover:bg-white
+        hover:text-[#052ff8]
+        text-white
+        px-4 md:px-8
+        py-3 md:py-4
+        rounded-xl
+        text-xs md:text-base
+        font-regular
+        transition-all
+        duration-300
+        shadow-[0_0_30px_rgba(5,47,248,0.35)]
+        flex
+        items-center
+        gap-2
+        whitespace-nowrap
+      "
+    >
+      <span>Join Waiting List</span>
+      <ArrowRight size={16} />
+    </button>
+  </a>
+
+
+  {/* How It Works */}
+  <a href="#invest" className="flex-shrink-0">
+    <button
+      className="
+        border
+        border-white/10
+        bg-white/5
+        backdrop-blur-md
+        hover:bg-white
+        hover:text-black
+        text-white
+        px-4 md:px-8
+        py-3 md:py-4
+        rounded-xl
+        text-xs md:text-base
+        font-regular
+        transition-all
+        duration-300
+        flex
+        items-center
+        gap-2
+        whitespace-nowrap
+      "
+    >
+      <span>Invest Now</span>
+      <ArrowRight size={16} />
+    </button>
+  </a>
+</div>
 
 {/* Top Features */}
 <div
