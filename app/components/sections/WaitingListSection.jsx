@@ -133,14 +133,14 @@ export default function WaitingListSection() {
         <div className="space-y-10">
           {/* HEADING */}
           <div className="max-w-xl">
-            <p className="text-[#0d46ff] uppercase tracking-[0.22em] text-xs font-medium mb-4">
+            <p className="text-[#0056ff] uppercase tracking-[0.22em] text-xs font-medium mb-4">
               Waiting List
             </p>
 
             <h2 className="text-4xl md:text-6xl font-bold leading-tight tracking-tight">
               Join the Future of{" "}
-              <span className="text-[#0d46ff]">
-                Social Reputation
+              <span className="text-[#0056ff]">
+                Social Scoring Reputation
               </span>
             </h2>
 
@@ -163,7 +163,7 @@ export default function WaitingListSection() {
                   rounded-2xl
                   p-5
                   backdrop-blur-xl
-                  hover:border-[#0d46ff]
+                  hover:border-[#0056ff]
                   transition-all
                   duration-300
                   flex
@@ -183,7 +183,7 @@ export default function WaitingListSection() {
                     justify-center
                     rounded-full
                     border
-                    border-[#0d46ff]/30
+                    border-[#0056ff]/30
                     bg-[#09111f]
                     mb-5
                   "
@@ -224,7 +224,7 @@ export default function WaitingListSection() {
               rounded-3xl
               backdrop-blur-xl
               p-7
-              hover:border-[#0d46ff]/40
+              hover:border-[#0056ff]/40
               transition-all
               duration-300
             "
@@ -261,7 +261,7 @@ export default function WaitingListSection() {
                     border-white/10
                     text-white
                     outline-none
-                    focus:border-[#0d46ff]
+                    focus:border-[#0056ff]
                     transition-all
                   "
                 />
@@ -288,7 +288,7 @@ export default function WaitingListSection() {
                     border-white/10
                     text-white
                     outline-none
-                    focus:border-[#0d46ff]
+                    focus:border-[#0056ff]
                     transition-all
                   "
                 />
@@ -315,7 +315,7 @@ export default function WaitingListSection() {
                     border-white/10
                     text-white
                     outline-none
-                    focus:border-[#0d46ff]
+                    focus:border-[#0056ff]
                     transition-all
                   "
                 />
@@ -341,7 +341,7 @@ export default function WaitingListSection() {
                     border-white/10
                     text-white
                     outline-none
-                    focus:border-[#0d46ff]
+                    focus:border-[#0056ff]
                     transition-all
                     appearance-none
                   "
@@ -371,8 +371,8 @@ export default function WaitingListSection() {
                     border
                     border-white/10
                     bg-[#09111f]
-                    checked:bg-[#0d46ff]
-                    checked:border-[#0d46ff]
+                    checked:bg-[#0056ff]
+                    checked:border-[#0056ff]
                     transition-all
                     cursor-pointer
                     relative
@@ -402,9 +402,9 @@ export default function WaitingListSection() {
                 disabled={loading}
                 className="
                   w-full
-                  bg-[#0d46ff]
+                  bg-[#0056ff]
                   hover:bg-white
-                  hover:text-[#0d46ff]
+                  hover:text-[#0056ff]
                   transition-all
                   duration-300
                   py-3.5

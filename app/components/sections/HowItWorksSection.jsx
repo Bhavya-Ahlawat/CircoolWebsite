@@ -5,7 +5,7 @@ export default function HowItWorksSection() {
     {
       number: "1",
       image: "/CreateYourProfile.png",
-      title: "Create Your Profile",
+      title: "Create Your Network Profile",
       description:
         "Build a verified digital identity with your interests, goals, location, and professional background.",
     },
@@ -78,26 +78,40 @@ export default function HowItWorksSection() {
       {/* <div className="absolute inset-0 bg-gradient-to-r from-[#00040d] via-[#00040d]/90 to-[#00040d]/30" /> */}
 
       {/* CONTENT */}
-      <div className="relative z-10 max-w-[90rem] mx-auto px-5 pt-110 md:pt-0">
+      <div className="relative z-10 max-w-[90rem] mx-auto px-5 pt-0 md:pt-0">
         
         {/* LEFT CONTENT */}
         <div className="max-w-3xl">
           
           {/* Label */}
-          <p className="text-[#0d46ff] uppercase tracking-[0.2em] text-xs font-medium mb-4">
+          <p className="text-[#0056ff] uppercase tracking-[0.2em] text-xs font-medium mb-4">
             How It Works
           </p>
 
           {/* Heading */}
           <h2 className="text-white font-bold leading-[0.95] tracking-tight text-4xl md:text-6xl">
-            How CirCool{" "}
-            <span className="text-[#0d46ff]">
+            How{" "}
+            <span className="text-[#0056ff]">
+             CirCool</span>
+            {" "}
+            <span >
               Works
             </span>
           </h2>
 
           {/* Description */}
-          <p className="text-white/75 text-sm md:text-lg leading-relaxed mt-6 max-w-xl">
+          <p className="text-white/75 text-sm md:text-lg leading-relaxed mt-6 max-w-xl bg-white/5
+    backdrop-blur-md
+    border border-white/10
+    rounded-2xl
+    p-5
+
+    /* Desktop unchanged */
+    lg:bg-transparent
+    lg:backdrop-blur-none
+    lg:border-0
+    lg:p-0
+    lg:rounded-none">
             CirCool transforms your digital presence into a living reputation score.
             Every verified interaction, meaningful connection, gift, endorsement,
             and trusted behavior helps you build social capital.
@@ -139,18 +153,30 @@ export default function HowItWorksSection() {
                   backdrop-blur-xl
                   transition-all
                   duration-300
-                  hover:border-[#0d46ff]
+                  hover:border-[#0056ff]
                 "
               >
                 {/* ICON */}
                 <div className="flex justify-center">
+                   <div
+    className="
+      w-17
+      h-17
+      rounded-full
+      border
+      border-yellow-400
+      flex
+      items-center
+      justify-center
+    "
+  >
                   <div
                     className="
                       w-16
                       h-16
                       rounded-full
                       border
-                      border-[#0d46ff]/40
+                      border-[#0056ff]/40
                       bg-[#081120]
                       flex
                       items-center
@@ -163,6 +189,7 @@ export default function HowItWorksSection() {
                       className="w-8 h-8 object-contain"
                     />
                   </div>
+                  </div>
                 </div>
 
                 {/* NUMBER */}
@@ -172,7 +199,7 @@ export default function HowItWorksSection() {
                       w-7
                       h-7
                       rounded-full
-                      bg-[#0d46ff]
+                      bg-[#0056ff]
                       flex
                       items-center
                       justify-center
@@ -204,7 +231,7 @@ export default function HowItWorksSection() {
                     lg:flex
                     items-center
                     justify-center
-                    text-[#0d46ff]
+                    text-[#0056ff]
                     shrink-0
                   "
                 >
@@ -243,7 +270,7 @@ export default function HowItWorksSection() {
                 h-14
                 rounded-full
                 border
-                border-[#0d46ff]/40
+                border-[#0056ff]/40
                 bg-[#081120]
                 flex
                 items-center
@@ -258,7 +285,7 @@ export default function HowItWorksSection() {
                       h-16
                       rounded-full
                       border
-                      border-[#0d46ff]/40
+                      border-[#0056ff]/40
                       bg-[#081120]
                       flex
                       items-center
@@ -289,9 +316,9 @@ export default function HowItWorksSection() {
           <a href="#join-waiting-list">
           <button
             className="
-              bg-[#0d46ff]
+              bg-[#0056ff]
               hover:bg-white
-              hover:text-[#0d46ff]
+              hover:text-[#0056ff]
               text-white
               px-8
               py-4

@@ -32,7 +32,7 @@ export default function BenefitsSection() {
     },
     {
       image: "/CreateYourProfile.png",
-      title: "Built for Everyone",
+      title: "Built Networking for Everyone",
       description:
         "Whether you're an individual, creator, professional, or business—CirCool is for you.",
     },
@@ -124,16 +124,16 @@ export default function BenefitsSection() {
         <div className="max-w-xl">
           
           {/* LABEL */}
-          <p className="text-[#0d46ff] uppercase tracking-[0.22em] text-xs font-medium mb-4">
+          <p className="text-[#0056ff] uppercase tracking-[0.22em] text-xs font-medium mb-4">
             Benefits
           </p>
 
           {/* TITLE */}
           <h2 className="text-white font-bold leading-tight tracking-tight text-4xl md:text-6xl">
-            Why CirCool is{" "}
-            <span className="text-[#0d46ff]">
-              Different.
-            </span>
+            Why{" "} <span className="text-[#0056ff]">CirCool</span>{" "}
+            
+             is Different.
+            
           </h2>
 
           {/* DESCRIPTION */}
@@ -167,7 +167,7 @@ export default function BenefitsSection() {
                 rounded-2xl
                 p-5
                 backdrop-blur-xl
-                hover:border-[#0d46ff]
+                hover:border-[#0056ff]
                 transition-all
                 duration-300
                 min-h-[270px]
@@ -183,7 +183,7 @@ export default function BenefitsSection() {
                     h-16
                     rounded-full
                     border
-                    border-[#0d46ff]/30
+                    border-[#0056ff]/30
                     bg-[#09111f]
                     flex
                     items-center
@@ -193,7 +193,7 @@ export default function BenefitsSection() {
                   <img
                     src={benefit.image}
                     alt={benefit.title}
-                    className="w-8 h-8 object-contain"
+                    className="w-10 h-10 object-contain"
                   />
                 </div>
               </div>
@@ -246,7 +246,7 @@ export default function BenefitsSection() {
                     h-16
                     rounded-full
                     border
-                    border-[#0d46ff]/30
+                    border-[#0056ff]/30
                     bg-[#09111f]
                     flex
                     items-center
@@ -263,7 +263,7 @@ export default function BenefitsSection() {
 
                 {/* CONTENT */}
                 {/* <div>
-                  <h3 className="text-[#0d46ff] text-2xl font-bold">
+                  <h3 className="text-[#0056ff] text-2xl font-bold">
                     {stat.number}
                   </h3>
 

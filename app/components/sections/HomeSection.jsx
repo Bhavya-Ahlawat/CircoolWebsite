@@ -83,12 +83,12 @@ export default function HomeSection() {
           </div>
 
           {/* Heading */}
-          <h1 className="text-white font-bold leading-[0.95] tracking-tight">
+          <h1 className="text-[#0056ff] font-bold leading-[0.95] tracking-tight">
             <span className="block text-5xl md:text-6xl">
               CirCool
             </span>
 
-            <span className="block text-5xl md:text-6xl text-[#0d46ff] mt-2">
+            <span className="block text-5xl md:text-6xl text-white mt-2">
               is the First
             </span>
 
@@ -133,9 +133,9 @@ export default function HomeSection() {
   <a href="#join-waiting-list" className="flex-shrink-0">
     <button
       className="
-        bg-[#052ff8]
+        bg-[#0056ff]
         hover:bg-white
-        hover:text-[#052ff8]
+        hover:text-[#0056ff]
         text-white
         px-4 md:px-8
         py-3 md:py-4

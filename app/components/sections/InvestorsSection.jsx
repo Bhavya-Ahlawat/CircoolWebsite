@@ -24,19 +24,19 @@ export default function InvestorsSection() {
       icon: "/rocket.png",
       title: "High Networking Potential",
       description:
-        "A massive market opportunity in the social reputation space is just beginning.",
+        "A market opportunity in the social reputation space is just beginning.",
     },
     {
       icon: "/GrowYourCircle.png",
       title: "First-Mover Advantage",
       description:
-        "Circool is 1st social scoring platform to unify social scoring reputation, rewards, and real-world utility.",
+        "Building the world’s first social scoring networking platform with massive global scalability potential.",
     },
     {
       icon: "/Trusted-&-Secure.png",
       title: "Proven Concept",
       description:
-        "Strong early traction, engaged community, and a clear product-market fit.",
+        "Positioned to lead the next generation of digital reputation, trust, and high-value networking.",
     },
     {
       icon: "/RewardsThatMatter.png",
@@ -110,7 +110,7 @@ export default function InvestorsSection() {
           right-[-200px]
           w-[700px]
           h-[700px]
-          bg-[#0d46ff]/20
+          bg-[#0056ff]/20
           blur-[180px]
           rounded-full
         "
@@ -121,7 +121,7 @@ export default function InvestorsSection() {
         {/* Hero */}
         <div className="max-w-5xl">
           {/* Label */}
-          <p className="text-[#0d46ff] uppercase tracking-[0.22em] text-sm font-medium mb-5 mt-20 md:mt-0">
+          <p className="text-[#0056ff] uppercase tracking-[0.22em] text-sm font-medium mb-5 mt-20 md:mt-0">
             FOR INVESTORS
           </p>
 
@@ -133,20 +133,21 @@ export default function InvestorsSection() {
               Shape the Future.
             </span>
           </h2> */}
-          <h2 className="text-white font-bold leading-tight tracking-tight text-5xl md:text-7xl">
-  <div className="flex flex-wrap items-center gap-3">
-    <span>Invest Early in</span>
+          <h2 className="text-white font-bold leading-tight tracking-tight text-5xl md:text-6xl">
+  <div className="flex flex-wrap items-center gap-4">
+    <span className="text-[#0056ff]">Invest </span>Early in
 
     <img
       src="/LogoCirCool.png"
       alt="Logo"
-      className="w-auto h-12 md:w-auto md:h-24 object-contain"
+      className="w-auto h-14 md:w-auto md:h-24 object-contain"
     />
   </div>
 
-  <span className="text-white block">
-    Shape the Future.
-  </span>
+  
+    Shape the {" "}
+  
+  <span className="text-[#0056ff]">Future</span>
 </h2>
 
           {/* Description */}
@@ -173,23 +174,21 @@ export default function InvestorsSection() {
     lg:rounded-none
   "
 >
-  Creating a platform where network long and early believers builders{" "}
+  Invest in the <span className="text-[#0056ff] text-lg md:text-2xl">First Social Scoring Networking</span> ecosystem {" "}
   <br className="hidden md:block" /> 
-  and innovators come together and grow and shape the future of{" "}
-  <br className="hidden md:block" />
-  reputation making better world together.
+  shaping the future of digital reputation.
 </p>
 
 {/* Buttons */}
 <div className="flex flex-nowrap md:flex-wrap gap-2 md:gap-4 mt-10 overflow-x-auto scrollbar-hide">
 
   {/* Join Button */}
-  <a href="#join-waiting-list" className="flex-shrink-0">
+  <a href="#invest" className="flex-shrink-0">
     <button
       className="
-        bg-[#052ff8]
+        bg-[#0056ff]
         hover:bg-white
-        hover:text-[#052ff8]
+        hover:text-[#0056ff]
         text-white
         px-4 md:px-8
         py-3 md:py-4
@@ -205,14 +204,14 @@ export default function InvestorsSection() {
         whitespace-nowrap
       "
     >
-      <span>Join Waiting List</span>
+      <span>Invest Now</span>
       <ArrowRight size={16} />
     </button>
   </a>
 
 
   {/* How It Works */}
-  <a href="#invest" className="flex-shrink-0">
+  <a href="#join-waiting-list" className="flex-shrink-0">
     <button
       className="
         border
@@ -235,7 +234,7 @@ export default function InvestorsSection() {
         whitespace-nowrap
       "
     >
-      <span>Invest Now</span>
+      <span>Join Waiting List</span>
       <ArrowRight size={16} />
     </button>
   </a>
@@ -283,7 +282,7 @@ export default function InvestorsSection() {
           flex
           items-center
           justify-center
-          text-[#0d46ff]
+          text-[#0056ff]
           shrink-0
         "
       >
@@ -315,7 +314,7 @@ export default function InvestorsSection() {
                 rounded-3xl
                 p-3
                 backdrop-blur-xl
-                hover:border-[#0d46ff]/50
+                hover:border-[#0056ff]/50
                 transition-all
                 duration-300
                 min-h-[300px]
@@ -330,12 +329,12 @@ export default function InvestorsSection() {
                   h-16
                   rounded-full
                   border
-                  border-[#0d46ff]/30
+                  border-[#0056ff]/30
                   bg-[#09111f]
                   flex
                   items-center
                   justify-center
-                  text-[#0d46ff]
+                  text-[#0056ff]
                   mx-auto
                 "
               >

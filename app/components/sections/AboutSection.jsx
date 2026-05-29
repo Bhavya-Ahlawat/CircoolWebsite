@@ -5,19 +5,19 @@ export default function AboutSection() {
       icon: "/mission.png",
       title: "Our Mission",
       description:
-        "Empower people and businesses through verifiable reputation and real transparency.",
+        "Building the First Social Scoring Network designed to power the future of trust, influence, and opportunity worldwide.",
     },
     {
       icon: "/view.png",
       title: "Our Vision",
       description:
-        "A future where trust drives every connection, transaction, and opportunity.",
+        "A future where your reputation becomes your most valuable digital asset.",
     },
     {
       icon: "/early-believers.png",
       title: "Our Values",
       description:
-        "Transparency, integrity, innovation, community, and impact above all.",
+        "We believe reputation will become the most powerful digital currency of the next generation.",
     },
   ];
 
@@ -94,7 +94,7 @@ export default function AboutSection() {
           right-[-200px]
           w-[700px]
           h-[700px]
-          bg-[#0d46ff]/20
+          bg-[#0056ff]/20
           blur-[180px]
           rounded-full
         "
@@ -107,7 +107,7 @@ export default function AboutSection() {
           {/* Left Side */}
           <div>
             {/* Label */}
-            <p className="text-[#0d46ff] uppercase tracking-[0.2em] text-sm font-medium mb-5">
+            <p className="text-[#0056ff] uppercase tracking-[0.2em] text-sm font-medium mb-5">
               ABOUT CIRCOOL
             </p>
 
@@ -115,7 +115,7 @@ export default function AboutSection() {
             <h2 className="text-white font-bold leading-tight tracking-tight text-5xl md:text-7xl">
               Building the Future
               <br />
-              <span className="text-[#0d46ff]">
+              <span className="text-[#0056ff]">
                 of Trust.
               </span>
             </h2>
@@ -189,15 +189,15 @@ export default function AboutSection() {
             <p className="text-white/70 text-md leading-relaxed mt-2">
               We built CirCool to change that—creating a platform
               where early believers, builders, and innovators can
-              come together, grow, and shape the future of
-              reputation, together.
+              come, grow, and shape the future of
+              reputation.
             </p>
 
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-5 pt-5 border-t border-white/10">
               {stats.map((stat, index) => (
                 <div key={index}>
-                  <h4 className="text-[#0d46ff] text-2xl font-bold">
+                  <h4 className="text-[#0056ff] text-2xl font-bold">
                     {stat.number}
                   </h4>
 
@@ -238,12 +238,12 @@ export default function AboutSection() {
                 h-20
                 rounded-full
                 border
-                border-[#0d46ff]/30
+                border-[#0056ff]/30
                 bg-[#09111f]
                 flex
                 items-center
                 justify-center
-                text-[#0d46ff]
+                text-[#0056ff]
                 shrink-0
               "
             >
@@ -260,7 +260,7 @@ export default function AboutSection() {
           {/* Button */}
           {/* <button
             className="
-              bg-[#0d46ff]
+              bg-[#0056ff]
               hover:bg-[#1b55ff]
               transition-all
               duration-300

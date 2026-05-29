@@ -82,7 +82,7 @@ export default function Navbar() {
 
                 {/* Underline (same effect preserved) */}
                 <span
-                  className={`absolute left-0 -bottom-1 h-[2px] bg-[#052ff8] transition-all duration-300
+                  className={`absolute left-0 -bottom-1 h-[2px] bg-[#0056ff] transition-all duration-300
                     ${isActive ? "w-full" : "w-0 group-hover:w-full"}
                   `}
                 />
@@ -108,7 +108,7 @@ export default function Navbar() {
           {/* Join Waiting List */}
           <a
             href="#join-waiting-list"
-            className="hidden md:flex items-center gap-2 bg-[#052ff8] text-white px-5 py-2.5 rounded-md font-medium transition-all duration-300 hover:bg-white hover:text-[#052ff8]"
+            className="hidden md:flex items-center gap-2 bg-[#0056ff] text-white px-5 py-2.5 rounded-md font-medium transition-all duration-300 hover:bg-white hover:text-[#0056ff]"
           >
             <span>Join Waiting List</span>
             <ArrowRight size={18} />
@@ -158,7 +158,7 @@ export default function Navbar() {
   <a
     href="#join-waiting-list"
     onClick={() => setMenuOpen(false)}
-    className="flex items-center justify-center gap-2 bg-[#052ff8] text-white px-5 py-3 rounded-md font-medium transition-all duration-300 hover:bg-white hover:text-[#052ff8]"
+    className="flex items-center justify-center gap-2 bg-[#0056ff] text-white px-5 py-3 rounded-md font-medium transition-all duration-300 hover:bg-white hover:text-[#0056ff]"
   >
     <span>Join Waiting List</span>
     <ArrowRight size={18} />

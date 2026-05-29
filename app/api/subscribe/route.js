@@ -19,7 +19,7 @@ export async function POST(req) {
       html: `
         <div style="font-family: Arial, sans-serif; padding: 20px;">
           
-          <h2 style="color:#0d46ff;">
+          <h2 style="color:#0056ff;">
             New Newsletter Subscriber
           </h2>
 

@@ -105,7 +105,7 @@ export default function FAQSection() {
           right-[-150px]
           w-[500px]
           h-[500px]
-          bg-[#0d46ff]/20
+          bg-[#0056ff]/20
           blur-[160px]
           rounded-full
         "
@@ -119,14 +119,14 @@ export default function FAQSection() {
         {/* Heading */}
         <div className="text-center max-w-4xl mx-auto">
           {/* Label */}
-          <p className="text-[#0d46ff] uppercase tracking-[0.2em] text-sm font-medium mb-5">
+          <p className="text-[#0056ff] uppercase tracking-[0.2em] text-sm font-medium mb-5">
             FAQ
           </p>
 
           {/* Title */}
           <h2 className="text-white font-bold leading-[0.95] tracking-tight text-4xl sm:text-5xl md:text-7xl md:whitespace-nowrap">
             Frequently{" "}
-            <span className="text-[#0d46ff]">
+            <span className="text-[#0056ff]">
               Asked Questions
             </span>
           </h2>
@@ -149,7 +149,7 @@ export default function FAQSection() {
                 rounded-3xl
                 backdrop-blur-xl
                 p-5
-                hover:border-[#0d46ff]/40
+                hover:border-[#0056ff]/40
                 transition-all
                 duration-300
               "
@@ -165,12 +165,12 @@ export default function FAQSection() {
                       h-16
                       rounded-full
                       border
-                      border-[#0d46ff]/30
+                      border-[#0056ff]/30
                       bg-[#09111f]
                       flex
                       items-center
                       justify-center
-                      text-[#0d46ff]
+                      text-[#0056ff]
                       shrink-0
                     "
                   >
@@ -186,7 +186,7 @@ export default function FAQSection() {
                 {/* Arrow */}
                 <ChevronDown
                   size={22}
-                  className="text-[#0d46ff] shrink-0 mt-1"
+                  className="text-[#0056ff] shrink-0 mt-1"
                 />
               </div>
 

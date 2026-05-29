@@ -6,7 +6,7 @@ import {
   FaLinkedin,
   FaTwitter,
   FaInstagram,
-  FaDiscord,
+  FaTiktok,
 } from "react-icons/fa";
 
 import { Mail, Globe } from "lucide-react";
@@ -90,7 +90,7 @@ export default function Footer() {
           </div>
 
           <p className="text-gray-400 text-sm">
-            The first social scoring ecosystem.
+            The First Social Scoring Network.
           </p>
 
           {/* SOCIAL ICONS */}
@@ -110,54 +110,8 @@ export default function Footer() {
                 border-white/10
                 text-white/60
                 hover:text-white
-                hover:border-[#0d46ff]
-                hover:bg-[#0d46ff]/10
-                transition-all
-                duration-300
-              "
-            >
-              <FaLinkedin />
-            </a>
-
-            <a
-              href="#"
-              className="
-                w-10
-                h-10
-                flex
-                items-center
-                justify-center
-                rounded-full
-                bg-[#09111f]
-                border
-                border-white/10
-                text-white/60
-                hover:text-white
-                hover:border-[#0d46ff]
-                hover:bg-[#0d46ff]/10
-                transition-all
-                duration-300
-              "
-            >
-              <FaTwitter />
-            </a>
-
-            <a
-              href="#"
-              className="
-                w-10
-                h-10
-                flex
-                items-center
-                justify-center
-                rounded-full
-                bg-[#09111f]
-                border
-                border-white/10
-                text-white/60
-                hover:text-white
-                hover:border-[#0d46ff]
-                hover:bg-[#0d46ff]/10
+                hover:border-[#0056ff]
+                hover:bg-[#0056ff]/10
                 transition-all
                 duration-300
               "
@@ -179,13 +133,59 @@ export default function Footer() {
                 border-white/10
                 text-white/60
                 hover:text-white
-                hover:border-[#0d46ff]
-                hover:bg-[#0d46ff]/10
+                hover:border-[#0056ff]
+                hover:bg-[#0056ff]/10
                 transition-all
                 duration-300
               "
             >
-              <FaDiscord />
+              <FaTwitter />
+            </a>
+
+            <a
+              href="#"
+              className="
+                w-10
+                h-10
+                flex
+                items-center
+                justify-center
+                rounded-full
+                bg-[#09111f]
+                border
+                border-white/10
+                text-white/60
+                hover:text-white
+                hover:border-[#0056ff]
+                hover:bg-[#0056ff]/10
+                transition-all
+                duration-300
+              "
+            >
+              <FaLinkedin />
+            </a>
+
+            <a
+              href="#"
+              className="
+                w-10
+                h-10
+                flex
+                items-center
+                justify-center
+                rounded-full
+                bg-[#09111f]
+                border
+                border-white/10
+                text-white/60
+                hover:text-white
+                hover:border-[#0056ff]
+                hover:bg-[#0056ff]/10
+                transition-all
+                duration-300
+              "
+            >
+              <FaTiktok />
             </a>
           </div>
         </div>
@@ -268,7 +268,7 @@ export default function Footer() {
 
               <li className="flex items-center gap-2 hover:text-white transition">
                 <Globe className="w-4 h-4 text-white/60" />
-                <span>www.circool.com</span>
+                <span>www.circool.net</span>
               </li>
             </ul>
           </div>
@@ -304,7 +304,7 @@ export default function Footer() {
                   border-white/10
                   text-white
                   outline-none
-                  focus:border-[#0d46ff]
+                  focus:border-[#0056ff]
                   transition-all
                 "
               />
@@ -354,7 +354,7 @@ export default function Footer() {
       flex-1
       min-w-0
       outline-none
-      focus:border-[#0d46ff]
+      focus:border-[#0056ff]
     "
   />
 
