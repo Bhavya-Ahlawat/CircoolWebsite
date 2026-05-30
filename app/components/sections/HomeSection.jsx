@@ -59,7 +59,7 @@ export default function HomeSection() {
 
       {/* Main Content */}
       <div className="relative z-10 max-w-[90rem] mx-auto px-6 w-full">
-        <div className="max-w-[90rem] pt-85 md:pt-0">
+        <div className="max-w-[90rem] pt-90 md:pt-0">
           
           {/* Tags */}
           <div className="flex flex-wrap gap-4 mb-8">
