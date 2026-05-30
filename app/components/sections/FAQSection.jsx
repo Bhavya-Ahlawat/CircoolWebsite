@@ -7,6 +7,7 @@ import {
   Mail,
   Bell,
   ArrowRight,
+  Share2,
 } from "lucide-react";
 
 export default function FAQSection() {
@@ -15,37 +16,37 @@ export default function FAQSection() {
       icon: <User size={30} />,
       question: "What is CirCool?",
       answer:
-        "CirCool is a social scoring ecosystem that helps users build digital reputation through trusted interactions, networking, gifts, verification, and meaningful engagement.",
+        "CirCool is building the reputation infrastructure for the next generation of the internet - transforming digital interactions into measurable trust, access, and credibility.",
     },
     {
-      icon: <Users size={30} />,
+      icon: <Share2 size={30} />,
       question: "Is CirCool a social network?",
       answer:
-        "Yes, but it goes beyond traditional social networking. CirCool focuses on reputation, access, trust, and social capital.",
+        "Not in the traditional sense. CirCool goes beyond followers and content by creating a reputation-driven social infrastructure powered by trust, credibility, and meaningful interactions.",
     },
     {
       icon: <Star size={30} />,
-      question: "How is the score calculated?",
+      question: "How is the reputation measured?",
       answer:
-        "The score is based on verified profile information, engagement quality, reputation signals, gifts, trusted connections, and platform activity.",
+        "CirCool's reputation engine analyzes verification, trust signals, engagement quality, network credibility, and behavioral intelligence to create a dynamic layer of digital reputation.",
     },
     {
-      icon: <User size={30} />,
+      icon: <Users size={30} />,
       question: "Who is CirCool for?",
       answer:
-        "Entrepreneurs, professionals, creators, founders, investors, students, travelers, and anyone who wants to build digital credibility.",
+        "CirCool is designed for ambitious individuals building influence, credibility, and meaningful connections in the digital world from founders and creators to investors, professionals, and global communities.",
     },
     {
       icon: <Clock3 size={30} />,
       question: "Is CirCool available now?",
       answer:
-        "CirCool is currently in early access. You can join the waiting list to be notified when invitations open.",
+        "CirCool is currently in private early access. Selected users and investors can request access to the prototype and join the waiting list for upcoming releases.",
     },
     {
       icon: <Mail size={30} />,
       question: "Can investors request more information?",
       answer:
-        "Yes. Investors can request the pitch deck and early access to the prototype by contacting our team.",
+        "Yes. Qualified investors and strategic partners can request access to the investor deck, private prototype, and early-stage visión materials by contacting our team.",
     },
   ];
 
@@ -124,16 +125,16 @@ export default function FAQSection() {
           </p>
 
           {/* Title */}
-          <h2 className="text-white font-bold leading-[0.95] tracking-tight text-4xl sm:text-5xl md:text-7xl md:whitespace-nowrap">
-            Frequently{" "}
+          <h2 className="text-white font-bold leading-[0.95] tracking-tight text-4xl sm:text-5xl md:text-6xl md:whitespace-nowrap">
+            Reputation is becoming{" "}
             <span className="text-[#0056ff]">
-              Asked Questions
+              Measurable
             </span>
           </h2>
 
           {/* Subtitle */}
           <p className="text-white/75 text-lg md:text-xl leading-relaxed mt-6">
-            Everything you need to know about CirCool.
+            CirCool is building the reputation infrastructure for the next generation of the Internet.
           </p>
         </div>
 

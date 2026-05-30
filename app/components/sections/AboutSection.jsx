@@ -112,7 +112,7 @@ export default function AboutSection() {
             </p>
 
             {/* Heading */}
-            <h2 className="text-white font-bold leading-tight tracking-tight text-5xl md:text-7xl">
+            <h2 className="text-white font-bold leading-tight tracking-tight text-5xl md:text-6xl">
               Building the Future
               <br />
               <span className="text-[#0056ff]">

@@ -121,7 +121,7 @@ export default function InvestorsSection() {
         {/* Hero */}
         <div className="max-w-5xl">
           {/* Label */}
-          <p className="text-[#0056ff] uppercase tracking-[0.22em] text-sm font-medium mb-5 mt-20 md:mt-0">
+          <p className="text-[#0056ff] uppercase tracking-[0.22em] text-sm font-medium mb-5 mt-0 md:mt-0">
             FOR INVESTORS
           </p>
 
@@ -133,28 +133,64 @@ export default function InvestorsSection() {
               Shape the Future.
             </span>
           </h2> */}
-          <h2 className="text-white font-bold leading-tight tracking-tight text-5xl md:text-6xl">
+          {/* <h2 className="text-white font-bold leading-tight tracking-tight text-3xl md:text-4xl">
   <div className="flex flex-wrap items-center gap-4">
-    <span className="text-[#0056ff]">Invest </span>Early in
+    <span className="text-[#0056ff] text-6xl md:text-7xl">INVEST</span> 
 
     <img
       src="/LogoCirCool.png"
       alt="Logo"
-      className="w-auto h-14 md:w-auto md:h-24 object-contain"
+      className="w-auto h-18 md:w-auto md:h-30 object-contain"
     />
   </div>
 
-  
-    Shape the {" "}
-  
-  <span className="text-[#0056ff]">Future</span>
+</h2> */}
+<h2 className="text-white font-bold leading-tight tracking-tight">
+  <div className="flex items-center gap-2 md:gap-4 whitespace-nowrap">
+    <span className="text-[#0056ff] text-4xl sm:text-5xl md:text-7xl">
+      INVEST
+    </span>
+
+    <img
+      src="/LogoCirCool.png"
+      alt="Logo"
+      className="h-14 sm:h-16 md:h-20 lg:h-24 w-auto object-contain"
+    />
+  </div>
 </h2>
 
           {/* Description */}
           <p
   className="
-    text-white/75
+    text-white
     text-lg md:text-xl
+    leading-tight 
+    mt-8
+    max-w-3xl
+    
+
+    /* Mobile glass effect only */
+    bg-white/5
+    backdrop-blur-md
+    border border-white/10
+    rounded-2xl
+    p-5
+
+    /* Remove on desktop */
+    lg:bg-transparent
+    lg:backdrop-blur-none
+    lg:border-0
+    lg:p-0
+    lg:rounded-none
+  "
+>
+  Invest in the <span className="text-[#0056ff] text-xl md:text-2xl">First Social Scoring Networking</span> ecosystem  
+  shaping the future of digital reputation. We believe digital reputation will become one of the most valuable assets of the next decade.
+</p>
+          <p
+  className="
+    text-white/75
+    text-sm md:text-lg
     leading-relaxed
     mt-8
     max-w-3xl
@@ -174,10 +210,10 @@ export default function InvestorsSection() {
     lg:rounded-none
   "
 >
-  Invest in the <span className="text-[#0056ff] text-lg md:text-2xl">First Social Scoring Networking</span> ecosystem {" "}
+  CirCool is building the infrastructure layer that will power trust, credibility, influence, and access for billions of users across the new internet. {" "}
   <br className="hidden md:block" /> 
-  shaping the future of digital reputation.
 </p>
+
 
 {/* Buttons */}
 <div className="flex flex-nowrap md:flex-wrap gap-2 md:gap-4 mt-10 overflow-x-auto scrollbar-hide">

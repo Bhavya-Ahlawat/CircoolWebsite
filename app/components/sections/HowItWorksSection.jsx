@@ -158,18 +158,6 @@ export default function HowItWorksSection() {
               >
                 {/* ICON */}
                 <div className="flex justify-center">
-                   <div
-    className="
-      w-17
-      h-17
-      rounded-full
-      border
-      border-yellow-400
-      flex
-      items-center
-      justify-center
-    "
-  >
                   <div
                     className="
                       w-16
@@ -188,7 +176,6 @@ export default function HowItWorksSection() {
                       alt={step.title}
                       className="w-8 h-8 object-contain"
                     />
-                  </div>
                   </div>
                 </div>
 

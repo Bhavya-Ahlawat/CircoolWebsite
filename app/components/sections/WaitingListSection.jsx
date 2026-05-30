@@ -16,37 +16,37 @@ export default function WaitingListSection() {
       icon: "/rocket.png",
       title: "Early Access",
       description:
-        "Be the first to explore CirCool and shape the future with us.",
+        "Be the first to explore CirCool and help shape the future. Your early access today sets the standard for tomorrow.",
     },
     {
       icon: "/BuildYourScore.png",
       title: "Build Your Reputation",
       description:
-        "Start building your CirCool Score early and gain an advantage.",
+        "Start building your CirCool Score early and unlock opportunities that grow with you. Your reputation is your advantage.",
     },
     {
       icon: "/diamond.png",
       title: "Exclusive Benefits",
       description:
-        "Get access to exclusive features, events, and premium opportunities.",
+        "Unlock exclusive features, curated events, and premium opportunities designed for early supporters like you.",
     },
     {
       icon: "/A-Global.png",
       title: "Global Community",
       description:
-        "Connect with ambitious people, communities, and opportunities.",
+        "Connect with visionary people and communities worldwide. Learn, collaborate, and create impact together.",
     },
     {
       icon: "/Trusted-&-Secure.png",
       title: "Secure & Private",
       description:
-        "Your data, your identity, your control. Built with privacy by design.",
+        "Your data, your identity, your control. CirCool is built with privacy by design and security you can trust.",
     },
     {
       icon: "/RewardsThatMatter.png",
       title: "Meaningful Impact",
       description:
-        "Turn your interactions into value, influence, and real opportunities.",
+        "Turn your interactions into real value. Influence, inspire, and unlock opportunities that create a lasting impact.",
     },
   ];
 
@@ -126,6 +126,20 @@ export default function WaitingListSection() {
           select-none
         "
       />
+      {/* TOP CENTER HEADING */}
+<div className="relative z-10 max-w-5xl mx-auto text-center px-6 mb-16 lg:mb-24">
+  <h2 className="text-4xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight">
+    TRUST IS BECOMING{" "}
+    <span className="text-[#0056ff]">PROGRAMMABLE</span>
+  </h2>
+
+  <p className="mt-6 text-white/70 text-base sm:text-2xl md:text-3xl leading-relaxed max-w-4xl mx-auto">
+    The next internet layer will be built on measurable reputation.
+  </p>
+  <p className="mt-6 text-white/70 text-base sm:text-sm md:text-lg leading-relaxed max-w-3xl mx-auto">
+    Where reputation becomes real-world access.
+  </p>
+</div>
 
       {/* CONTENT */}
       <div className="relative z-10 max-w-[90rem] mx-auto grid lg:grid-cols-[60%_40%] gap-14 items-start px-6">
