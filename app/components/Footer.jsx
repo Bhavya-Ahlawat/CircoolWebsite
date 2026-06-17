@@ -13,18 +13,18 @@ import { Mail, Globe } from "lucide-react";
 
 export default function Footer() {
   const productLinks = [
-    { name: "How It Works", href: "#how-it-works" },
-    { name: "Benefits", href: "#benefits" },
-    { name: "For Investors", href: "#for-investors" },
-    { name: "FAQ", href: "#faq" },
-  ];
+  { name: "How It Works", id: "how-it-works" },
+  { name: "Benefits", id: "benefits" },
+  { name: "For Investors", id: "for-investors" },
+  { name: "FAQ", id: "faq" },
+];
 
   const companyLinks = [
-    { name: "About", href: "#about" },
-    { name: "Privacy Policy", href: "#privacy-policy" },
-    { name: "Terms of Use", href: "#terms-of-use" },
-    { name: "Contact", href: "#contact" },
-  ];
+  { name: "About", id: "about" },
+  { name: "Privacy Policy", id: "privacy-policy" },
+  { name: "Terms of Use", id: "terms-of-use" },
+  { name: "Contact", id: "contact" },
+];
 
   const resourcesLinks = [
     { name: "Investor Deck", href: "#investor-deck" },
@@ -73,6 +73,9 @@ export default function Footer() {
 
     setSubscribing(false);
   };
+  const getFooterHref = (id) => {
+  return `/#${id}`;
+};
 
   return (
     <footer className="bg-black text-white py-10">
@@ -81,13 +84,13 @@ export default function Footer() {
         {/* LOGO & SOCIAL */}
         <div className="flex flex-col gap-4 lg:w-[20%] min-w-[200px]">
           
-          <div className="flex items-center gap-2">
-            <img
-              src="/LogoCirCool.png"
-              alt="CirCool Logo"
-              className="w-auto h-10"
-            />
-          </div>
+          <Link href="/" className="flex items-center gap-2">
+  <img
+    src="/LogoCirCool.png"
+    alt="CirCool Logo"
+    className="w-auto h-10"
+  />
+</Link>
 
           <p className="text-gray-400 text-sm">
             The First Social Scoring Network.
@@ -203,7 +206,7 @@ export default function Footer() {
               {productLinks.map((link) => (
                 <li key={link.name}>
                   <Link
-                    href={link.href}
+                    href={getFooterHref(link.id)}
                     className="text-gray-300 hover:text-white transition"
                   >
                     {link.name}
@@ -223,7 +226,7 @@ export default function Footer() {
               {companyLinks.map((link) => (
                 <li key={link.name}>
                   <Link
-                    href={link.href}
+                    href={getFooterHref(link.id)}
                     className="text-gray-300 hover:text-white transition"
                   >
                     {link.name}
@@ -268,7 +271,14 @@ export default function Footer() {
 
               <li className="flex items-center gap-2 hover:text-white transition">
                 <Globe className="w-4 h-4 text-white/60" />
-                <span>www.circool.net</span>
+                {/* <span>www.circool.net</span> */}
+                <a
+  href="https://www.circool.net"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  www.circool.net
+</a>
               </li>
             </ul>
           </div>
