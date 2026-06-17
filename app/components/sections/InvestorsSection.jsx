@@ -1,4 +1,5 @@
 import { ExternalLink, ArrowRight, Play } from "lucide-react";
+import Link from "next/link";
 export default function InvestorsSection() {
   const topFeatures = [
     {
@@ -218,8 +219,9 @@ export default function InvestorsSection() {
 {/* Buttons */}
 <div className="flex flex-nowrap md:flex-wrap gap-2 md:gap-4 mt-10 overflow-x-auto scrollbar-hide">
 
-  {/* Join Button */}
-  <a href="#invest" className="flex-shrink-0">
+  {/* Invest Button */}
+
+  <Link href="/invest-now" className="flex-shrink-0">
     <button
       className="
         bg-[#0056ff]
@@ -243,10 +245,10 @@ export default function InvestorsSection() {
       <span>Invest Now</span>
       <ArrowRight size={16} />
     </button>
-  </a>
+  </Link>
 
 
-  {/* How It Works */}
+  {/* Join waiting list */}
   <a href="#join-waiting-list" className="flex-shrink-0">
     <button
       className="

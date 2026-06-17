@@ -76,10 +76,10 @@ export default function Footer() {
 
   return (
     <footer className="bg-black text-white py-10">
-      <div className="max-w-[90rem] px-6 mx-auto w-full flex flex-col md:flex-row md:justify-between gap-8 md:gap-0">
+      <div className="max-w-[90rem] px-6 mx-auto w-full flex flex-col lg:flex-row lg:justify-between gap-8 lg:gap-0">
         
         {/* LOGO & SOCIAL */}
-        <div className="flex flex-col gap-4 md:w-[20%] min-w-[200px]">
+        <div className="flex flex-col gap-4 lg:w-[20%] min-w-[200px]">
           
           <div className="flex items-center gap-2">
             <img
@@ -191,7 +191,7 @@ export default function Footer() {
         </div>
 
         {/* FOOTER LINKS */}
-        <div className="grid grid-cols-2 sm:grid-cols-5 gap-6 flex-1 min-w-[250px]">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-6 flex-1 min-w-[250px]">
           
           {/* PRODUCT */}
           <div>

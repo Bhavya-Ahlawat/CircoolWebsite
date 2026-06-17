@@ -1,5 +1,6 @@
 
 import { ExternalLink, ArrowRight, Play } from "lucide-react";
+import Link from "next/link";
 export default function HomeSection() {
   return (
     <section
@@ -23,7 +24,7 @@ export default function HomeSection() {
         alt=""
         className="
           hidden md:block
-          translate-y-0
+          translate-y-14
           absolute
           inset-0
           w-full
@@ -63,23 +64,25 @@ export default function HomeSection() {
           
           {/* Tags */}
           <div className="flex flex-wrap gap-4 mb-8">
+            <Link href="/invest-now">
             <div className="border border-[#504915] bg-[#0b0f1d]/80 backdrop-blur-md text-[#debc77] px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2">
   <img
     src="/early.png"
     alt="Early Access"
     className="w-4 h-4 object-contain"
   />
-  <span>EARLY ACCESS</span>
+  <span>Join Founding Members</span>
 </div>
+</Link>
 
-            <div className="border border-white/10 bg-[#0b0f1d]/80 backdrop-blur-md text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2">
+            {/* <div className="border border-white/10 bg-[#0b0f1d]/80 backdrop-blur-md text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2">
   <img
     src="/invite.png"
     alt="Invite Only"
     className="w-4 h-4 object-contain"
   />
   <span>Invite Only</span>
-</div>
+</div> */}
           </div>
 
           {/* Heading */}

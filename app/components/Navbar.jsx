@@ -4,8 +4,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { ExternalLink, ArrowRight, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+  const pathname = usePathname();
+
   const navItems = [
     { name: "Home", id: "home" },
     { name: "How It Works", id: "how-it-works" },
@@ -19,9 +22,12 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
+    if (pathname !== "/") return;
+
     const handleScroll = () => {
       navItems.forEach((item) => {
         const section = document.getElementById(item.id);
+
         if (!section) return;
 
         const rect = section.getBoundingClientRect();
@@ -36,18 +42,23 @@ export default function Navbar() {
     handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [pathname]);
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 768) {
+      if (window.innerWidth >= 1024) {
         setMenuOpen(false);
       }
     };
 
     window.addEventListener("resize", handleResize);
+
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  const getNavHref = (id) => {
+  return id === "home" ? "/" : `/#${id}`;
+};
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-[#00040d]/90 backdrop-blur-xl pointer-events-auto">
@@ -66,25 +77,33 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-10">
+        <nav className="hidden lg:flex items-center gap-10">
           {navItems.map((item) => {
-            const isActive = activeSection === item.id;
+            const isActive =
+              pathname === "/" && activeSection === item.id;
 
             return (
               <Link
                 key={item.id}
-                href={`#${item.id}`}
+                href={getNavHref(item.id)}
                 className="group relative text-sm font-medium transition-all duration-300 pb-1 text-white"
               >
-                <span className={isActive ? "text-white" : "text-white hover:text-white/80"}>
+                <span
+                  className={
+                    isActive
+                      ? "text-white"
+                      : "text-white hover:text-white/80"
+                  }
+                >
                   {item.name}
                 </span>
 
-                {/* Underline (same effect preserved) */}
                 <span
-                  className={`absolute left-0 -bottom-1 h-[2px] bg-[#0056ff] transition-all duration-300
-                    ${isActive ? "w-full" : "w-0 group-hover:w-full"}
-                  `}
+                  className={`absolute left-0 -bottom-1 h-[2px] bg-[#0056ff] transition-all duration-300 ${
+                    isActive
+                      ? "w-full"
+                      : "w-0 group-hover:w-full"
+                  }`}
                 />
               </Link>
             );
@@ -99,25 +118,25 @@ export default function Navbar() {
             href="https://www.figma.com/proto/DP2CvJ5sTyU2M8B3pxoeCA/Sin-t%C3%ADtulo?node-id=7-368&t=dl6qrpMHTpr1QgfA-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:flex items-center gap-2 border border-[#504915] text-[#debc77] px-5 py-2.5 rounded-md font-medium transition-all duration-300 hover:bg-[#debc77] hover:text-black"
+            className="hidden lg:flex items-center gap-2 border border-[#504915] text-[#debc77] px-5 py-2.5 rounded-md font-medium transition-all duration-300 hover:bg-[#debc77] hover:text-black"
           >
             <span>View Prototype</span>
             <ExternalLink size={18} />
           </a>
 
           {/* Join Waiting List */}
-          <a
-            href="#join-waiting-list"
-            className="hidden md:flex items-center gap-2 bg-[#0056ff] text-white px-5 py-2.5 rounded-md font-medium transition-all duration-300 hover:bg-white hover:text-[#0056ff]"
+          <Link
+            href="/#join-waiting-list"
+            className="hidden lg:flex items-center gap-2 bg-[#0056ff] text-white px-5 py-2.5 rounded-md font-medium transition-all duration-300 hover:bg-white hover:text-[#0056ff]"
           >
             <span>Join Waiting List</span>
             <ArrowRight size={18} />
-          </a>
+          </Link>
 
-          {/* Mobile Menu Button (no style change to your theme) */}
+          {/* Mobile Menu Button */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden text-white relative z-[10000]"
+            className="lg:hidden text-white relative z-[10000]"
             type="button"
           >
             {menuOpen ? <X size={26} /> : <Menu size={26} />}
@@ -125,14 +144,14 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu (same colors + glass feel preserved) */}
+      {/* Mobile Menu */}
       {menuOpen && (
-  <div className="absolute top-full left-0 md:hidden w-full bg-[#00040d]/95 backdrop-blur-xl border-t border-white/10 px-6 py-5 flex flex-col gap-4 z-[9999]"> 
+        <div className="absolute top-full left-0 lg:hidden w-full bg-[#00040d]/95 backdrop-blur-xl border-t border-white/10 px-6 py-5 flex flex-col gap-4 z-[9999]">
 
           {navItems.map((item) => (
             <Link
               key={item.id}
-              href={`#${item.id}`}
+              href={getNavHref(item.id)}
               onClick={() => setMenuOpen(false)}
               className="text-white text-sm font-medium"
             >
@@ -142,29 +161,27 @@ export default function Navbar() {
 
           <div className="border-t border-white/10 pt-4 flex flex-col gap-3">
 
-  {/* View Prototype */}
-  <a
-    href="https://www.figma.com/proto/DP2CvJ5sTyU2M8B3pxoeCA/Sin-t%C3%ADtulo?node-id=7-368&t=dl6qrpMHTpr1QgfA-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1"
-    target="_blank"
-    rel="noopener noreferrer"
-    onClick={() => setMenuOpen(false)}
-    className="flex items-center justify-center gap-2 border border-[#504915] text-[#debc77] px-5 py-3 rounded-md font-medium transition-all duration-300 hover:bg-[#debc77] hover:text-black"
-  >
-    <span>View Prototype</span>
-    <ExternalLink size={18} />
-  </a>
+            <a
+              href="https://www.figma.com/proto/DP2CvJ5sTyU2M8B3pxoeCA/Sin-t%C3%ADtulo?node-id=7-368&t=dl6qrpMHTpr1QgfA-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMenuOpen(false)}
+              className="flex items-center justify-center gap-2 border border-[#504915] text-[#debc77] px-5 py-3 rounded-md font-medium transition-all duration-300 hover:bg-[#debc77] hover:text-black"
+            >
+              <span>View Prototype</span>
+              <ExternalLink size={18} />
+            </a>
 
-  {/* Join Waiting List */}
-  <a
-    href="#join-waiting-list"
-    onClick={() => setMenuOpen(false)}
-    className="flex items-center justify-center gap-2 bg-[#0056ff] text-white px-5 py-3 rounded-md font-medium transition-all duration-300 hover:bg-white hover:text-[#0056ff]"
-  >
-    <span>Join Waiting List</span>
-    <ArrowRight size={18} />
-  </a>
+            <Link
+              href="/#join-waiting-list"
+              onClick={() => setMenuOpen(false)}
+              className="flex items-center justify-center gap-2 bg-[#0056ff] text-white px-5 py-3 rounded-md font-medium transition-all duration-300 hover:bg-white hover:text-[#0056ff]"
+            >
+              <span>Join Waiting List</span>
+              <ArrowRight size={18} />
+            </Link>
 
-</div>
+          </div>
         </div>
       )}
     </header>
